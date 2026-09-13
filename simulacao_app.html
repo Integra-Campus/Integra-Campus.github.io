@@ -46,196 +46,110 @@ body{
 }
 
 /* ---------- Intro strip ---------- */
-.stage-intro{
-  max-width:420px;
-  text-align:center;
-  margin-bottom:26px;
-}
+.stage-intro{max-width:440px; text-align:center; margin-bottom:26px;}
 .stage-intro .eyebrow{
-  display:inline-block;
-  font-size:12.5px;
-  font-weight:700;
-  color:var(--blue-deep);
-  background:rgba(139,182,225,0.18);
-  padding:5px 12px;
-  border-radius:999px;
-  margin-bottom:12px;
+  display:inline-block; font-size:12.5px; font-weight:700; color:var(--blue-deep);
+  background:rgba(139,182,225,0.18); padding:5px 12px; border-radius:999px; margin-bottom:12px;
 }
-.stage-intro h1{
-  font-size:22px;
-  margin:0 0 8px;
-  letter-spacing:-0.01em;
-}
-.stage-intro p{
-  font-size:14px;
-  line-height:1.55;
-  color:var(--ink-soft);
-  margin:0;
-}
+.stage-intro h1{font-size:22px; margin:0 0 8px; letter-spacing:-0.01em;}
+.stage-intro p{font-size:14px; line-height:1.55; color:var(--ink-soft); margin:0;}
 
 /* ---------- Phone frame ---------- */
 .phone-shell{
-  position:relative;
-  width:375px;
-  max-width:92vw;
-  height:812px;
+  position:relative; 
+  width:375px; 
+  max-width:92vw; 
+  height:812px; 
+  min-height:700px; /* <-- GARANTE ALTURA MÍNIMA */
   max-height:82vh;
-  background:#181A1E;
-  border-radius:46px;
+  background:#181A1E; 
+  border-radius:46px; 
   padding:14px;
   box-shadow:0 30px 60px rgba(20,22,26,0.35), 0 2px 0 rgba(255,255,255,0.04) inset;
+  
 }
 .phone-notch{
-  position:absolute;
-  top:14px; left:50%;
-  transform:translateX(-50%);
-  width:120px; height:22px;
-  background:#181A1E;
-  border-radius:0 0 16px 16px;
-  z-index:5;
+  position:absolute; top:14px; left:50%; transform:translateX(-50%);
+  width:120px; height:22px; background:#181A1E; border-radius:0 0 16px 16px; z-index:20;
 }
 .phone-screen{
-  position:relative;
-  width:100%; height:100%;
-  background:var(--bg);
-  border-radius:32px;
+  position:relative; 
+  width:100%; 
+  height:100%; 
+  min-height:672px; /* <-- GARANTE ALTURA MÍNIMA INTERNA */
+  background:var(--bg); 
+  border-radius:32px; 
   overflow:hidden;
 }
 
 /* ---------- App screens ---------- */
-.app-screen{
-  position:absolute;
-  inset:0;
-  display:none;
-  flex-direction:column;
-  background:var(--bg);
-}
+.app-screen{position:absolute; inset:0; display:none; flex-direction:column; background:var(--bg);}
 .app-screen.show{display:flex;}
-.app-scroll{
-  flex:1;
-  overflow-y:auto;
-  padding:14px 16px 26px;
-}
+.app-scroll{flex:1; overflow-y:auto; padding:14px 16px 26px;}
 .app-scroll::-webkit-scrollbar{width:0;}
 
 /* ---------- Header ---------- */
-.app-header{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:20px 16px 10px;
-  flex-shrink:0;
-}
+.app-header{display:flex; align-items:center; gap:10px; padding:20px 16px 10px; flex-shrink:0;}
 .icon-btn{
-  width:34px; height:34px;
-  border:none;
-  background:var(--white);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:15px;
-  box-shadow:var(--shadow);
-  cursor:pointer;
-  color:var(--ink);
-  flex-shrink:0;
+  width:34px; height:34px; border:none; background:var(--white); border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:15px;
+  box-shadow:var(--shadow); cursor:pointer; color:var(--ink); flex-shrink:0;
 }
 .header-user{
-  flex:1;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  background:var(--white);
-  border-radius:999px;
-  padding:5px 14px 5px 5px;
-  box-shadow:var(--shadow);
+  flex:1; display:flex; align-items:center; gap:10px; background:var(--white);
+  border-radius:999px; padding:5px 14px 5px 5px; box-shadow:var(--shadow);
 }
 .avatar-circle{
-  width:34px; height:34px;
-  border-radius:50%;
+  width:34px; height:34px; border-radius:50%;
   background:linear-gradient(135deg,var(--blue-mid),var(--blue-deep));
-  display:flex; align-items:center; justify-content:center;
-  font-size:16px;
-  flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;
 }
 .header-user .name{font-size:13.5px; font-weight:700; line-height:1.1;}
 .header-user .sub{font-size:11px; color:var(--ink-soft);}
-.app-header.sub-header .header-title{
-  flex:1;
-  font-size:16px;
-  font-weight:800;
-}
+.app-header.sub-header .header-title{flex:1; font-size:16px; font-weight:800;}
 
 /* ---------- Generic card ---------- */
-.card{
-  background:var(--white);
-  border-radius:var(--radius-md);
-  box-shadow:var(--shadow);
-  padding:14px;
-}
-.section-label{
-  display:flex; align-items:center; justify-content:space-between;
-  font-size:13px; font-weight:700;
-  color:var(--ink);
-  margin:18px 2px 10px;
-}
-.section-label .see-more{
-  font-size:11.5px; font-weight:600; color:var(--blue-deep); cursor:pointer;
-}
+.card{background:var(--white); border-radius:var(--radius-md); box-shadow:var(--shadow); padding:14px;}
+.section-label{display:flex; align-items:center; justify-content:space-between; font-size:13px; font-weight:700; color:var(--ink); margin:18px 2px 10px;}
+.section-label .see-more{font-size:11.5px; font-weight:600; color:var(--blue-deep); cursor:pointer;}
 .section-label:first-of-type{margin-top:6px;}
 
 /* Points pill */
 .points-pill{
-  margin-top:12px;
-  background:linear-gradient(135deg,var(--blue),var(--blue-mid));
-  border-radius:999px;
-  padding:9px 16px;
-  display:inline-flex; align-items:center; gap:6px;
-  font-weight:800; font-size:13px; color:var(--ink);
+  margin-top:12px; background:linear-gradient(135deg,var(--blue),var(--blue-mid)); border-radius:999px;
+  padding:9px 16px; display:inline-flex; align-items:center; gap:6px; font-weight:800; font-size:13px; color:var(--ink);
+  transition:transform 0.25s ease;
 }
+.points-pill.bump{transform:scale(1.12);}
+
+/* Mode pill (status Modo Sala de Foco) */
+.mode-pill{
+  margin-top:10px; display:inline-flex; align-items:center; gap:6px; background:var(--white);
+  border-radius:999px; padding:7px 14px; font-size:11px; font-weight:700; box-shadow:var(--shadow);
+}
+.mode-pill .dot{width:8px; height:8px; border-radius:50%; background:var(--green);}
+.mode-pill.active .dot{background:var(--red);}
+.mode-pill.active{color:var(--red);}
 
 /* Quick nav pills */
 .quicknav{display:flex; gap:8px; margin-top:14px;}
 .quicknav button{
-  flex:1;
-  border:none;
-  background:var(--white);
-  border-radius:var(--radius-sm);
-  padding:10px 6px;
-  font-size:11.5px;
-  font-weight:700;
-  color:var(--ink);
-  box-shadow:var(--shadow);
-  cursor:pointer;
+  flex:1; border:none; background:var(--white); border-radius:var(--radius-sm); padding:10px 6px;
+  font-size:11.5px; font-weight:700; color:var(--ink); box-shadow:var(--shadow); cursor:pointer;
 }
 .quicknav button:active{transform:scale(0.97);}
 
 /* Subject grid */
-.subject-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:2px;
-}
+.subject-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:2px;}
 .subject-card{
-  position:relative;
-  border-radius:var(--radius-md);
-  padding:14px 12px 34px;
-  color:var(--white);
-  cursor:pointer;
-  min-height:78px;
-  box-shadow:var(--shadow);
-  border:none;
-  text-align:left;
-  font-family:inherit;
+  position:relative; border-radius:var(--radius-md); padding:14px 12px 34px; color:var(--white);
+  cursor:pointer; min-height:78px; box-shadow:var(--shadow); border:none; text-align:left; font-family:inherit;
 }
 .subject-card .sname{font-size:14px; font-weight:800; display:block;}
 .subject-card .steacher{font-size:10.5px; opacity:0.85; display:block; margin-top:2px;}
 .subject-card .smore{
-  position:absolute; right:10px; bottom:10px;
-  width:22px; height:22px;
-  background:rgba(255,255,255,0.25);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:11px;
+  position:absolute; right:10px; bottom:10px; width:22px; height:22px; background:rgba(255,255,255,0.25);
+  border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px;
 }
 .c-red{background:linear-gradient(135deg,#E13A4B,var(--red));}
 .c-orange{background:linear-gradient(135deg,#FFC15C,var(--orange));}
@@ -245,52 +159,32 @@ body{
 
 /* Tarefas row */
 .task-row{display:flex; gap:10px; overflow-x:auto; padding-bottom:4px; margin-top:2px;}
-.task-card{
-  min-width:108px;
-  border-radius:var(--radius-md);
-  padding:12px 10px;
-  color:var(--white);
-  flex-shrink:0;
-}
+.task-card{min-width:120px; border-radius:var(--radius-md); padding:12px 10px; color:var(--white); flex-shrink:0;}
 .task-card .tname{font-size:12.5px; font-weight:800;}
 .task-card .tdate{font-size:10.5px; opacity:0.85; margin-top:4px;}
+.task-complete-btn{
+  margin-top:8px; width:100%; border:none; border-radius:999px; padding:6px 4px; font-size:10px;
+  font-weight:800; background:rgba(255,255,255,0.28); color:var(--white); cursor:pointer;
+}
+.task-complete-btn:disabled{background:rgba(255,255,255,0.16); color:rgba(255,255,255,0.6); cursor:default;}
 
 /* Lists */
-.list-item{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:10px 0;
-  border-bottom:1px solid #EEF1F4;
-  font-size:12.5px;
-}
+.list-item{display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid #EEF1F4; font-size:12.5px;}
 .list-item:last-child{border-bottom:none;}
 .list-item .li-left{display:flex; align-items:center; gap:8px; font-weight:600;}
 
 /* App icon chip */
 .app-chip{
-  width:42px; height:42px;
-  border-radius:12px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:19px;
-  background:var(--bg-soft);
-  box-shadow:var(--shadow);
-  flex-shrink:0;
+  width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+  font-size:19px; background:var(--bg-soft); box-shadow:var(--shadow); flex-shrink:0;
 }
 .app-row{display:flex; gap:10px; margin-top:2px; flex-wrap:wrap;}
 
 /* FAQ buttons */
 .faq-btn{
-  width:100%;
-  text-align:left;
-  border:none;
-  background:var(--white);
-  border-radius:var(--radius-sm);
-  padding:11px 14px;
-  font-size:12.5px;
-  font-weight:600;
-  color:var(--ink);
-  box-shadow:var(--shadow);
-  margin-bottom:8px;
-  cursor:pointer;
+  width:100%; text-align:left; border:none; background:var(--white); border-radius:var(--radius-sm);
+  padding:11px 14px; font-size:12.5px; font-weight:600; color:var(--ink); box-shadow:var(--shadow);
+  margin-bottom:8px; cursor:pointer;
 }
 
 /* Bars chart */
@@ -303,59 +197,28 @@ body{
 
 /* Turma card */
 .turma-card{
-  border-radius:var(--radius-md);
-  padding:16px;
-  color:var(--white);
-  margin-bottom:10px;
-  cursor:pointer;
-  box-shadow:var(--shadow);
-  border:none;
-  width:100%;
-  text-align:left;
-  font-family:inherit;
+  border-radius:var(--radius-md); padding:16px; color:var(--white); margin-bottom:10px; cursor:pointer;
+  box-shadow:var(--shadow); border:none; width:100%; text-align:left; font-family:inherit;
 }
 .turma-card .tname{font-size:16px; font-weight:800;}
 .turma-card .tcount{font-size:11px; opacity:0.9; margin-top:4px;}
 
 /* Big content-subject card (Conteúdo Extra) */
-.big-subject-card{
-  border-radius:var(--radius-lg);
-  padding:18px;
-  color:var(--white);
-  box-shadow:var(--shadow);
-}
+.big-subject-card{border-radius:var(--radius-lg); padding:18px; color:var(--white); box-shadow:var(--shadow);}
 .big-subject-card h3{margin:0; font-size:19px;}
 .big-subject-card .bsub{font-size:12px; opacity:0.9; margin-top:2px;}
 .reco-block{margin-top:16px;}
 .reco-block .rk{font-size:11.5px; font-weight:700; color:var(--white); opacity:0.9; margin-bottom:8px;}
 .reco-cards{display:flex; gap:10px;}
-.reco-card{
-  flex:1;
-  background:rgba(255,255,255,0.16);
-  border:1px solid rgba(255,255,255,0.25);
-  border-radius:12px;
-  padding:10px;
-  min-height:74px;
-}
+.reco-card{flex:1; background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.25); border-radius:12px; padding:10px; min-height:74px;}
 .reco-card .rtitle{font-size:11.5px; font-weight:800; color:var(--white);}
 .reco-card .rdesc{font-size:9.5px; color:rgba(255,255,255,0.85); margin-top:4px; line-height:1.3;}
 .other-subjects{display:flex; gap:8px; margin-top:16px; overflow-x:auto;}
-.other-subjects button{
-  flex-shrink:0;
-  border:none;
-  border-radius:999px;
-  padding:8px 14px;
-  font-size:11.5px; font-weight:700;
-  color:var(--white);
-  cursor:pointer;
-}
+.other-subjects button{flex-shrink:0; border:none; border-radius:999px; padding:8px 14px; font-size:11.5px; font-weight:700; color:var(--white); cursor:pointer;}
 
 /* Map (biblioteca) */
 .map-box{
-  height:170px;
-  border-radius:var(--radius-md);
-  position:relative;
-  overflow:hidden;
+  height:170px; border-radius:var(--radius-md); position:relative; overflow:hidden;
   background:
     linear-gradient(180deg, rgba(139,182,225,0.35), rgba(139,182,225,0.15)),
     repeating-linear-gradient(0deg, #DCEBF7 0 2px, transparent 2px 40px),
@@ -363,84 +226,27 @@ body{
     var(--bg-soft);
   box-shadow:var(--shadow);
 }
-.map-river{
-  position:absolute; left:38%; top:-10%; width:26%; height:120%;
-  background:#8FCBEA;
-  border-radius:50%;
-  transform:rotate(12deg);
-  opacity:0.8;
-}
-.map-park{
-  position:absolute; width:46px; height:46px; border-radius:50%;
-  background:#B7E4B0;
-}
-.pin{
-  position:absolute;
-  width:22px; height:22px;
-  background:var(--orange);
-  border-radius:50% 50% 50% 0;
-  transform:rotate(-45deg);
-  box-shadow:0 3px 6px rgba(0,0,0,0.25);
-}
+.map-river{position:absolute; left:38%; top:-10%; width:26%; height:120%; background:#8FCBEA; border-radius:50%; transform:rotate(12deg); opacity:0.8;}
+.map-park{position:absolute; width:46px; height:46px; border-radius:50%; background:#B7E4B0;}
+.pin{position:absolute; width:22px; height:22px; background:var(--orange); border-radius:50% 50% 50% 0; transform:rotate(-45deg); box-shadow:0 3px 6px rgba(0,0,0,0.25);}
 .search-bar{
-  margin-top:12px;
-  background:var(--ink);
-  color:var(--white);
-  border-radius:999px;
-  padding:12px 16px;
-  font-size:12.5px;
-  font-weight:600;
-  display:flex; align-items:center; gap:8px;
-  box-shadow:var(--shadow);
+  margin-top:12px; background:var(--ink); color:var(--white); border-radius:999px; padding:12px 16px;
+  font-size:12.5px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:var(--shadow);
 }
 .book-grid{display:flex; gap:10px; overflow-x:auto; margin-top:2px; padding-bottom:4px;}
-.book-card{
-  min-width:96px; height:120px;
-  border-radius:12px;
-  color:var(--white);
-  padding:10px;
-  display:flex; align-items:flex-end;
-  font-size:11px; font-weight:800;
-  flex-shrink:0;
-}
+.book-card{min-width:96px; height:120px; border-radius:12px; color:var(--white); padding:10px; display:flex; align-items:flex-end; font-size:11px; font-weight:800; flex-shrink:0;}
 
 /* Avatar screen */
 .avatar-wrap{display:flex; flex-direction:column; align-items:center; margin-top:6px;}
 .avatar-big{
-  width:150px; height:150px;
-  border-radius:50%;
-  border:5px solid var(--blue-deep);
-  background:linear-gradient(160deg,#FCD9A8,#F5A623);
-  display:flex; align-items:center; justify-content:center;
-  font-size:64px;
-  box-shadow:var(--shadow);
+  width:150px; height:150px; border-radius:50%; border:5px solid var(--blue-deep);
+  background:linear-gradient(160deg,#FCD9A8,#F5A623); display:flex; align-items:center; justify-content:center;
+  font-size:64px; box-shadow:var(--shadow);
 }
-.avatar-name-pill{
-  margin-top:-18px;
-  background:var(--blue-mid);
-  color:var(--white);
-  border-radius:999px;
-  padding:14px 22px 8px;
-  text-align:center;
-  font-weight:800;
-  font-size:14px;
-}
-.avatar-name-pill .apts{
-  display:inline-block; margin-top:6px;
-  background:var(--white); color:var(--ink);
-  border-radius:999px; padding:4px 12px; font-size:11px; font-weight:700;
-}
+.avatar-name-pill{margin-top:-18px; background:var(--blue-mid); color:var(--white); border-radius:999px; padding:14px 22px 8px; text-align:center; font-weight:800; font-size:14px;}
+.avatar-name-pill .apts{display:inline-block; margin-top:6px; background:var(--white); color:var(--ink); border-radius:999px; padding:4px 12px; font-size:11px; font-weight:700;}
 .acc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:2px;}
-.acc-item{
-  background:var(--blue-mid);
-  border-radius:var(--radius-md);
-  padding:12px 8px;
-  text-align:center;
-  color:var(--white);
-  cursor:pointer;
-  border:none;
-  font-family:inherit;
-}
+.acc-item{background:var(--blue-mid); border-radius:var(--radius-md); padding:12px 8px; text-align:center; color:var(--white); cursor:pointer; border:none; font-family:inherit;}
 .acc-item.owned{background:var(--green);}
 .acc-item .aicon{font-size:24px;}
 .acc-item .apoints{font-size:10.5px; font-weight:800; margin-top:6px; display:block;}
@@ -448,123 +254,135 @@ body{
 
 /* Tags */
 .tag-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:2px;}
-.tag{
-  background:var(--bg-soft);
-  border-radius:999px;
-  padding:6px 12px;
-  font-size:11.5px;
-  font-weight:700;
-  color:var(--ink);
-  border:1px solid #E4E8ED;
-}
+.tag{background:var(--bg-soft); border-radius:999px; padding:6px 12px; font-size:11.5px; font-weight:700; color:var(--ink); border:1px solid #E4E8ED;}
 
 /* Strength / weakness rows */
-.perf-row{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:10px 12px;
-  border-radius:var(--radius-sm);
-  margin-bottom:8px;
-  font-size:12.5px;
-  font-weight:700;
-}
+.perf-row{display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-radius:var(--radius-sm); margin-bottom:8px; font-size:12.5px; font-weight:700;}
 .perf-row.good{background:rgba(47,125,58,0.12); color:var(--green);}
 .perf-row.bad{background:rgba(208,2,27,0.10); color:var(--red);}
 .perf-row .val{font-size:11.5px; font-weight:800;}
 
 /* Status now using */
-.status-card{
-  background:var(--ink);
-  color:var(--white);
-  border-radius:var(--radius-md);
-  padding:14px;
-  display:flex; align-items:center; gap:10px;
-  box-shadow:var(--shadow);
-}
+.status-card{background:var(--ink); color:var(--white); border-radius:var(--radius-md); padding:14px; display:flex; align-items:center; gap:10px; box-shadow:var(--shadow);}
 .status-card .sicon{font-size:22px;}
 .status-card .slabel{font-size:10.5px; opacity:0.75;}
 .status-card .sapp{font-size:13.5px; font-weight:800;}
 
 /* Login screen */
-.login-wrap{
-  flex:1; display:flex; flex-direction:column; justify-content:center;
-  padding:0 26px;
-}
-.login-logo{
-  width:58px; height:58px; border-radius:18px;
-  background:linear-gradient(135deg,var(--blue-mid),var(--purple));
-  display:flex; align-items:center; justify-content:center;
-  font-size:26px; color:var(--white); margin:0 auto 16px;
-}
+.login-wrap{flex:1; display:flex; flex-direction:column; justify-content:center; padding:0 26px;}
+.login-logo{width:58px; height:58px; border-radius:18px; background:linear-gradient(135deg,var(--blue-mid),var(--purple)); display:flex; align-items:center; justify-content:center; font-size:26px; color:var(--white); margin:0 auto 16px;}
 .login-wrap h2{text-align:center; font-size:19px; margin:0 0 4px;}
 .login-wrap p.sub{text-align:center; font-size:12.5px; color:var(--ink-soft); margin:0 0 26px;}
 .field{margin-bottom:14px;}
 .field label{font-size:11.5px; font-weight:700; color:var(--ink-soft); display:block; margin-bottom:6px;}
-.field input{
-  width:100%; border:1px solid #E1E6EB; background:var(--white);
-  border-radius:var(--radius-sm); padding:12px 14px; font-size:13.5px;
-  font-family:inherit; color:var(--ink);
-}
+.field input{width:100%; border:1px solid #E1E6EB; background:var(--white); border-radius:var(--radius-sm); padding:12px 14px; font-size:13.5px; font-family:inherit; color:var(--ink);}
 .field input:focus{outline:2px solid var(--blue-deep); outline-offset:1px;}
-.btn-primary{
-  width:100%; border:none; background:var(--ink); color:var(--white);
-  border-radius:999px; padding:13px; font-size:13.5px; font-weight:700;
-  cursor:pointer; margin-top:6px;
-}
+.btn-primary{width:100%; border:none; background:var(--ink); color:var(--white); border-radius:999px; padding:13px; font-size:13.5px; font-weight:700; cursor:pointer; margin-top:6px;}
 .btn-primary:active{transform:scale(0.98);}
 .login-role-select{display:flex; gap:8px; margin-bottom:18px;}
-.login-role-select button{
-  flex:1; border:1.5px solid #E1E6EB; background:var(--white);
-  border-radius:var(--radius-sm); padding:9px 4px; font-size:10.5px; font-weight:700;
-  color:var(--ink-soft); cursor:pointer;
-}
-.login-role-select button.active{
-  border-color:var(--blue-deep); background:rgba(139,182,225,0.18); color:var(--ink);
-}
+.login-role-select button{flex:1; border:1.5px solid #E1E6EB; background:var(--white); border-radius:var(--radius-sm); padding:9px 4px; font-size:10.5px; font-weight:700; color:var(--ink-soft); cursor:pointer;}
+.login-role-select button.active{border-color:var(--blue-deep); background:rgba(139,182,225,0.18); color:var(--ink);}
 .login-hint{text-align:center; font-size:10.5px; color:var(--ink-soft); margin-top:18px;}
 
-/* Alert / mode pill (Modo Sala de Foco) */
-.mode-pill{
-  margin-top:12px;
-  display:inline-flex; align-items:center; gap:6px;
-  background:var(--white);
-  border-radius:999px;
-  padding:8px 14px;
-  font-size:11px; font-weight:700;
-  box-shadow:var(--shadow);
-}
-.mode-pill .dot{width:8px; height:8px; border-radius:50%; background:var(--green);}
-
-/* Bottom tab bar (persists across role home + sub screens) */
-.tabbar{
-  flex-shrink:0;
-  display:flex;
-  border-top:1px solid #E7EAEE;
-  background:var(--white);
-}
-.tabbar button{
-  flex:1; border:none; background:none; padding:10px 4px 12px;
-  display:flex; flex-direction:column; align-items:center; gap:3px;
-  font-size:9.5px; font-weight:700; color:var(--ink-soft); cursor:pointer;
-}
+/* Bottom tab bar */
+.tabbar{flex-shrink:0; display:flex; border-top:1px solid #E7EAEE; background:var(--white);}
+.tabbar button{flex:1; border:none; background:none; padding:10px 4px 12px; display:flex; flex-direction:column; align-items:center; gap:3px; font-size:9.5px; font-weight:700; color:var(--ink-soft); cursor:pointer;}
 .tabbar button .ticon{font-size:16px;}
 .tabbar button.active{color:var(--blue-deep);}
 
-/* Demo control strip (outside the phone — not part of the app itself) */
-.demo-strip{
-  margin-top:22px;
-  display:flex; align-items:center; gap:8px;
-  background:var(--white);
-  border-radius:999px;
-  padding:6px;
-  box-shadow:var(--shadow);
-}
+/* Demo control strip (fora do celular) */
+.demo-strip{margin-top:22px; display:flex; align-items:center; gap:8px; background:var(--white); border-radius:999px; padding:6px; box-shadow:var(--shadow);}
 .demo-strip span{font-size:10.5px; color:var(--ink-soft); font-weight:700; padding-left:10px;}
-.demo-strip button{
-  border:none; background:var(--bg-soft); border-radius:999px;
-  padding:7px 14px; font-size:11.5px; font-weight:700; color:var(--ink); cursor:pointer;
-}
+.demo-strip button{border:none; background:var(--bg-soft); border-radius:999px; padding:7px 14px; font-size:11.5px; font-weight:700; color:var(--ink); cursor:pointer;}
 .demo-strip button.active{background:var(--ink); color:var(--white);}
 .demo-strip .logout{background:transparent; color:var(--red); font-weight:800;}
+
+/* ---------- Funcionalidade 1: Modo Sala de Foco — grade de apps ---------- */
+.focus-toggle-card{
+  background:var(--white); border-radius:var(--radius-md); box-shadow:var(--shadow); padding:16px;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.focus-toggle-card .ftxt .ftitle{font-size:13.5px; font-weight:800;}
+.focus-toggle-card .ftxt .fdesc{font-size:11px; color:var(--ink-soft); margin-top:2px;}
+.switch{position:relative; width:48px; height:28px; flex-shrink:0;}
+.switch input{opacity:0; width:0; height:0;}
+.switch-track{
+  position:absolute; inset:0; background:#D8DEE5; border-radius:999px; cursor:pointer; transition:background 0.2s;
+}
+.switch-track::before{
+  content:""; position:absolute; width:22px; height:22px; left:3px; top:3px; background:var(--white);
+  border-radius:50%; transition:transform 0.2s; box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.switch input:checked + .switch-track{background:var(--green);}
+.switch input:checked + .switch-track::before{transform:translateX(20px);}
+
+.phone-sim-box{
+  margin-top:16px; background:linear-gradient(160deg,#20242B,#14161A); border-radius:var(--radius-lg);
+  padding:16px; box-shadow:var(--shadow);
+}
+.phone-sim-box .psb-title{color:var(--white); font-size:12px; font-weight:700; opacity:0.8; margin-bottom:12px;}
+.app-icon-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+.app-icon{
+  display:flex; flex-direction:column; align-items:center; gap:6px; background:none; border:none; cursor:pointer; font-family:inherit;
+}
+.app-icon .aiw{
+  width:52px; height:52px; border-radius:15px; display:flex; align-items:center; justify-content:center;
+  font-size:24px; box-shadow:0 4px 10px rgba(0,0,0,0.25); position:relative;
+}
+.app-icon .lbl{font-size:9.5px; font-weight:700; color:var(--white); text-align:center;}
+.app-icon .lock-badge{
+  position:absolute; bottom:-4px; right:-4px; width:18px; height:18px; border-radius:50%;
+  background:var(--red); color:var(--white); font-size:9px; display:flex; align-items:center; justify-content:center;
+  border:2px solid #14161A;
+}
+
+/* Modal de bloqueio */
+.modal-overlay{
+  position:absolute; inset:0; background:rgba(20,22,26,0.72); z-index:50;
+  display:none; align-items:center; justify-content:center; padding:30px;
+}
+.modal-overlay.show{display:flex;}
+.block-modal{
+  background:var(--white); border-radius:var(--radius-lg); padding:26px 20px; text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3); max-width:280px;
+}
+.block-modal .bicon{font-size:44px; margin-bottom:10px;}
+.block-modal h4{margin:0 0 8px; font-size:15.5px; color:var(--red);}
+.block-modal p{margin:0 0 18px; font-size:12.5px; color:var(--ink-soft); line-height:1.5;}
+.block-modal button{border:none; background:var(--ink); color:var(--white); border-radius:999px; padding:10px 24px; font-size:12.5px; font-weight:700; cursor:pointer;}
+
+/* Toast de notificação */
+.toast-stack{position:absolute; top:14px; left:14px; right:14px; z-index:60; display:flex; flex-direction:column; gap:8px; pointer-events:none;}
+.toast{
+  background:var(--ink); color:var(--white); border-radius:var(--radius-sm); padding:11px 14px; font-size:12px;
+  font-weight:600; box-shadow:0 10px 24px rgba(0,0,0,0.28); display:flex; align-items:center; gap:8px;
+  opacity:0; transform:translateY(-10px); transition:opacity 0.25s, transform 0.25s;
+}
+.toast.show{opacity:1; transform:translateY(0);}
+.toast.achievement{background:linear-gradient(135deg,var(--purple),#B15CFF);}
+.toast .temoji{font-size:16px;}
+
+/* ---------- Funcionalidade 2: Painel de alertas do professor ---------- */
+.alert-panel-btn{
+  width:100%; border:none; background:var(--ink); color:var(--white); border-radius:var(--radius-sm);
+  padding:12px; font-size:12.5px; font-weight:700; cursor:pointer; margin-top:4px;
+}
+.alert-item{
+  background:var(--white); border-left:4px solid var(--red); border-radius:10px; padding:10px 12px;
+  margin-bottom:8px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:space-between; gap:8px;
+}
+.alert-item .atxt{font-size:11.5px; font-weight:600; line-height:1.4;}
+.alert-item .atxt .atime{display:block; font-size:10px; color:var(--ink-soft); font-weight:500; margin-top:2px;}
+.alert-item button{border:none; background:var(--bg-soft); color:var(--ink); border-radius:999px; padding:6px 12px; font-size:10.5px; font-weight:700; cursor:pointer; flex-shrink:0;}
+.empty-alerts{font-size:11.5px; color:var(--ink-soft); text-align:center; padding:14px 0;}
+
+/* ---------- Funcionalidade 4: Alertas recentes (Pais) ---------- */
+.parent-alert{
+  background:var(--white); border-radius:10px; padding:10px 12px; margin-bottom:8px; box-shadow:var(--shadow);
+  display:flex; gap:8px; align-items:flex-start; font-size:11.5px; font-weight:600;
+}
+.parent-alert .pa-icon{font-size:15px; flex-shrink:0;}
+.parent-alert .pa-time{display:block; font-size:10px; color:var(--ink-soft); font-weight:500; margin-top:2px;}
 </style>
 </head>
 <body>
@@ -572,12 +390,23 @@ body{
 <div class="stage-intro">
   <span class="eyebrow">Protótipo interativo</span>
   <h1>Integra Campus — Simulação do App</h1>
-  <p>Mockup navegável do aplicativo mobile, com os perfis Aluno, Professor e Responsável. Use a barra abaixo do celular para trocar de perfil de demonstração.</p>
+  <p>Mockup navegável do aplicativo mobile com demonstrações funcionais do Modo Sala de Foco, do painel de alertas do professor e da gamificação. Use a barra abaixo do celular para trocar de perfil.</p>
 </div>
 
 <div class="phone-shell">
   <div class="phone-notch"></div>
   <div class="phone-screen" id="phoneScreen">
+
+    <!-- Overlay reutilizável para toasts e para o modal de app bloqueado -->
+    <div class="toast-stack" id="toastStack"></div>
+    <div class="modal-overlay" id="blockedModal">
+      <div class="block-modal">
+        <div class="bicon">🛡️</div>
+        <h4>Aplicativo bloqueado</h4>
+        <p>Aplicativo bloqueado durante a atividade. Modo Sala de Foco ativo. Foque nos estudos!</p>
+        <button onclick="closeBlockedModal()">Entendi</button>
+      </div>
+    </div>
 
     <!-- ================= LOGIN ================= -->
     <div class="app-screen show" id="screen-login">
@@ -592,14 +421,8 @@ body{
           <button data-role="responsavel" onclick="pickLoginRole('responsavel')">Responsável</button>
         </div>
 
-        <div class="field">
-          <label>Usuário</label>
-          <input type="text" placeholder="nome.sobrenome">
-        </div>
-        <div class="field">
-          <label>Senha</label>
-          <input type="password" placeholder="••••••••">
-        </div>
+        <div class="field"><label>Usuário</label><input type="text" placeholder="nome.sobrenome"></div>
+        <div class="field"><label>Senha</label><input type="password" placeholder="••••••••"></div>
         <button class="btn-primary" onclick="doLogin()">Entrar</button>
         <div class="login-hint">Simulação — não é necessário preencher os campos.</div>
       </div>
@@ -608,7 +431,7 @@ body{
     <!-- ================= ALUNO · HOME ================= -->
     <div class="app-screen" id="screen-aluno-home">
       <div class="app-header">
-        <button class="icon-btn" onclick="alert('Menu — simulação')">☰</button>
+        <button class="icon-btn" onclick="showToast('Menu — simulação','ℹ️')">☰</button>
         <div class="header-user">
           <div class="avatar-circle">🧑‍🎓</div>
           <div><div class="name">Nome do Aluno</div></div>
@@ -616,7 +439,8 @@ body{
         <button class="icon-btn">🔍</button>
       </div>
       <div class="app-scroll">
-        <span class="points-pill">⭐ Pontos: 13</span>
+        <span class="points-pill" id="alunoPointsPill">⭐ Pontos: <span id="alunoPointsValue">13</span></span>
+        <div><span class="mode-pill" id="alunoModePill"><span class="dot"></span>Modo Sala de Foco: inativo</span></div>
 
         <div class="quicknav">
           <button onclick="navigateTo('screen-aluno-controle')">Controle</button>
@@ -626,29 +450,26 @@ body{
 
         <div class="section-label">Matérias <span class="see-more">Ler mais</span></div>
         <div class="subject-grid">
-          <button class="subject-card c-red" onclick="openSubject('historia')">
-            <span class="sname">História</span><span class="steacher">Professor</span>
-            <span class="smore">›</span>
-          </button>
-          <button class="subject-card c-orange" onclick="openSubject('matematica')">
-            <span class="sname">Matemática</span><span class="steacher">Professor</span>
-            <span class="smore">›</span>
-          </button>
-          <button class="subject-card c-purple" onclick="openSubject('ingles')">
-            <span class="sname">Inglês</span><span class="steacher">Professor</span>
-            <span class="smore">›</span>
-          </button>
-          <button class="subject-card c-green" onclick="openSubject('artes')">
-            <span class="sname">Artes</span><span class="steacher">Professor</span>
-            <span class="smore">›</span>
-          </button>
+          <button class="subject-card c-red" onclick="openSubject('historia')"><span class="sname">História</span><span class="steacher">Professor</span><span class="smore">›</span></button>
+          <button class="subject-card c-orange" onclick="openSubject('matematica')"><span class="sname">Matemática</span><span class="steacher">Professor</span><span class="smore">›</span></button>
+          <button class="subject-card c-purple" onclick="openSubject('ingles')"><span class="sname">Inglês</span><span class="steacher">Professor</span><span class="smore">›</span></button>
+          <button class="subject-card c-green" onclick="openSubject('artes')"><span class="sname">Artes</span><span class="steacher">Professor</span><span class="smore">›</span></button>
         </div>
 
         <div class="section-label">Tarefas <span class="see-more">Ler mais</span></div>
         <div class="task-row">
-          <div class="task-card c-red"><div class="tname">História</div><div class="tdate">Entrega 05/09</div></div>
-          <div class="task-card c-blue"><div class="tname">Artes</div><div class="tdate">Entrega 15/09</div></div>
-          <div class="task-card c-orange"><div class="tname">Música</div><div class="tdate">Entrega 18/09</div></div>
+          <div class="task-card c-red">
+            <div class="tname">História</div><div class="tdate">Entrega 05/09</div>
+            <button class="task-complete-btn" id="task-btn-historia" onclick="completeTask('historia','História',10)">Concluir tarefa (+10 XP)</button>
+          </div>
+          <div class="task-card c-blue">
+            <div class="tname">Artes</div><div class="tdate">Entrega 15/09</div>
+            <button class="task-complete-btn" id="task-btn-artes" onclick="completeTask('artes','Artes',10)">Concluir tarefa (+10 XP)</button>
+          </div>
+          <div class="task-card c-orange">
+            <div class="tname">Música</div><div class="tdate">Entrega 18/09</div>
+            <button class="task-complete-btn" id="task-btn-musica" onclick="completeTask('musica','Música',10)">Concluir tarefa (+10 XP)</button>
+          </div>
         </div>
       </div>
       <div class="tabbar">
@@ -667,21 +488,25 @@ body{
         <button class="icon-btn">🔍</button>
       </div>
       <div class="app-scroll">
-        <div class="card" style="text-align:center; padding:22px 14px;">
-          <div style="font-size:13px; color:var(--ink-soft); font-weight:700; margin-bottom:6px;">Modo Sala de Foco</div>
-          <div style="font-size:20px; font-weight:800; color:var(--green);">Inativo</div>
-          <div class="mode-pill"><span class="dot"></span>Nenhuma atividade em andamento</div>
+        <div class="focus-toggle-card">
+          <div class="ftxt">
+            <div class="ftitle">Modo Sala de Foco</div>
+            <div class="fdesc" id="focusDescText">Inativo — todos os apps abrem normalmente</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="focusToggle" onchange="toggleFocusMode(this.checked)">
+            <span class="switch-track"></span>
+          </label>
         </div>
-        <div class="section-label">Apps liberados agora</div>
-        <div class="app-row">
-          <div class="app-chip">📘</div>
-          <div class="app-chip">📖</div>
-          <div class="app-chip">🧮</div>
+
+        <div class="phone-sim-box">
+          <div class="psb-title">Tela inicial do smartphone do aluno (simulação)</div>
+          <div class="app-icon-grid" id="appIconGrid"><!-- gerado via JS --></div>
         </div>
+
         <div class="section-label">Histórico de bloqueios</div>
-        <div class="card">
-          <div class="list-item"><span class="li-left">📸 Instagram bloqueado</span><span>09:32</span></div>
-          <div class="list-item"><span class="li-left">🎮 Jogo bloqueado</span><span>10:10</span></div>
+        <div class="card" id="blockHistoryCard">
+          <div class="empty-alerts">Nenhuma tentativa registrada ainda.</div>
         </div>
       </div>
       <div class="tabbar">
@@ -732,9 +557,7 @@ body{
         <div class="header-title">Nome do Aluno</div>
         <button class="icon-btn">🔍</button>
       </div>
-      <div class="app-scroll" id="contentScroll">
-        <!-- preenchido dinamicamente por openSubject() -->
-      </div>
+      <div class="app-scroll" id="contentScroll"></div>
     </div>
 
     <!-- ================= ALUNO · BIBLIOTECA ================= -->
@@ -755,7 +578,6 @@ body{
           <div class="pin" style="top:75%; left:20%;"></div>
         </div>
         <div class="search-bar">🔍 Busque seu livro</div>
-
         <div class="section-label">Recomendados para você</div>
         <div class="book-grid">
           <div class="book-card c-red">Livro de computação</div>
@@ -782,30 +604,18 @@ body{
       <div class="app-scroll">
         <div class="avatar-wrap">
           <div class="avatar-big">🧑‍🎨</div>
-          <div class="avatar-name-pill">Nome do Aluno<br><span class="apts">Pontos: 13</span></div>
+          <div class="avatar-name-pill">Nome do Aluno<br><span class="apts">Pontos: <span id="avatarPointsValue">13</span></span></div>
         </div>
-
         <div class="section-label">Acessórios</div>
         <div class="acc-grid">
-          <button class="acc-item owned" onclick="this.classList.toggle('owned')">
-            <div class="aicon">👕</div><span class="apoints">40 pontos</span>
-          </button>
-          <button class="acc-item" onclick="this.classList.toggle('owned')">
-            <div class="aicon">🧢</div><span class="apoints">97 pontos</span>
-          </button>
-          <button class="acc-item" onclick="this.classList.toggle('owned')">
-            <div class="aicon">🕶️</div><span class="apoints">59 pontos</span>
-          </button>
+          <button class="acc-item owned" onclick="this.classList.toggle('owned')"><div class="aicon">👕</div><span class="apoints">40 pontos</span></button>
+          <button class="acc-item" onclick="this.classList.toggle('owned')"><div class="aicon">🧢</div><span class="apoints">97 pontos</span></button>
+          <button class="acc-item" onclick="this.classList.toggle('owned')"><div class="aicon">🕶️</div><span class="apoints">59 pontos</span></button>
         </div>
-
         <div class="section-label">Loja de pontos</div>
         <div class="store-row">
-          <div class="app-chip">📸</div>
-          <div class="app-chip">🎵</div>
-          <div class="app-chip">✖️</div>
-          <div class="app-chip">🎮</div>
-          <div class="app-chip">🍿</div>
-          <div class="app-chip">💬</div>
+          <div class="app-chip">📸</div><div class="app-chip">🎵</div><div class="app-chip">✖️</div>
+          <div class="app-chip">🎮</div><div class="app-chip">🍿</div><div class="app-chip">💬</div>
         </div>
       </div>
       <div class="tabbar">
@@ -819,7 +629,7 @@ body{
     <!-- ================= RESPONSÁVEL · HOME ================= -->
     <div class="app-screen" id="screen-pais-home">
       <div class="app-header">
-        <button class="icon-btn" onclick="alert('Menu — simulação')">☰</button>
+        <button class="icon-btn" onclick="showToast('Menu — simulação','ℹ️')">☰</button>
         <div class="header-user">
           <div class="avatar-circle">🧑</div>
           <div><div class="name">Nome do Pai</div><div class="sub">Nome do filho</div></div>
@@ -832,17 +642,19 @@ body{
           <div style="font-size:26px; font-weight:800; margin-top:4px;">3h 30 min</div>
         </div>
 
+        <div class="section-label">Alertas recentes <span class="see-more" id="parentAlertCount">0 novos</span></div>
+        <div id="parentAlertsList">
+          <div class="empty-alerts">Nenhum alerta no momento. Tudo tranquilo! ✅</div>
+        </div>
+
         <div class="section-label">Últimos acessados <span class="see-more">Ler mais</span></div>
         <div class="app-row">
-          <div class="app-chip">🌐</div>
-          <div class="app-chip">▶️</div>
-          <div class="app-chip">🌍</div>
-          <div class="app-chip">📸</div>
+          <div class="app-chip">🌐</div><div class="app-chip">▶️</div><div class="app-chip">🌍</div><div class="app-chip">📸</div>
         </div>
 
         <div class="section-label">Perguntas frequentes</div>
-        <button class="faq-btn" onclick="alert('Conteúdo de apoio sobre bullying — simulação')">O que fazer em caso de bullying?</button>
-        <button class="faq-btn" onclick="alert('Conteúdo de apoio sobre tempo de tela — simulação')">Como monitorar o tempo de tela?</button>
+        <button class="faq-btn" onclick="showToast('Conteúdo de apoio sobre bullying — simulação','💬')">O que fazer em caso de bullying?</button>
+        <button class="faq-btn" onclick="showToast('Conteúdo de apoio sobre tempo de tela — simulação','💬')">Como monitorar o tempo de tela?</button>
         <button class="faq-btn" onclick="navigateTo('screen-pais-desempenho')">Como está o desempenho do meu filho?</button>
 
         <div class="section-label">Desempenho</div>
@@ -860,11 +672,11 @@ body{
       <div class="tabbar">
         <button class="active" onclick="navigateTo('screen-pais-home')"><span class="ticon">🏠</span>Início</button>
         <button onclick="navigateTo('screen-pais-desempenho')"><span class="ticon">📊</span>Desempenho</button>
-        <button onclick="alert('Central de ajuda — simulação')"><span class="ticon">💬</span>Ajuda</button>
+        <button onclick="showToast('Central de ajuda — simulação','💬')"><span class="ticon">💬</span>Ajuda</button>
       </div>
     </div>
 
-    <!-- ================= RESPONSÁVEL · DESEMPENHO DETALHADO (reaproveita tela de detalhes) ================= -->
+    <!-- ================= RESPONSÁVEL · DESEMPENHO DETALHADO ================= -->
     <div class="app-screen" id="screen-pais-desempenho">
       <div class="app-header sub-header">
         <button class="icon-btn" onclick="goBack()">←</button>
@@ -882,10 +694,6 @@ body{
             <div class="bar-col"><div class="bar" style="height:55%; background:var(--green);"></div><div class="blabel">Fís.</div></div>
           </div>
         </div>
-        <div class="section-label">Apps permitidos <span class="see-more">Ler mais</span></div>
-        <div class="app-row">
-          <div class="app-chip">🌐</div><div class="app-chip">▶️</div><div class="app-chip">🌍</div><div class="app-chip">📗</div>
-        </div>
         <div class="section-label">Pontos fortes</div>
         <div class="perf-row good"><span>Matemática</span><span class="val">Média 9.6</span></div>
         <div class="perf-row good"><span>Inglês</span><span class="val">Média 9.4</span></div>
@@ -896,14 +704,14 @@ body{
       <div class="tabbar">
         <button onclick="navigateTo('screen-pais-home')"><span class="ticon">🏠</span>Início</button>
         <button class="active"><span class="ticon">📊</span>Desempenho</button>
-        <button onclick="alert('Central de ajuda — simulação')"><span class="ticon">💬</span>Ajuda</button>
+        <button onclick="showToast('Central de ajuda — simulação','💬')"><span class="ticon">💬</span>Ajuda</button>
       </div>
     </div>
 
     <!-- ================= PROFESSOR · HOME ================= -->
     <div class="app-screen" id="screen-professor-home">
       <div class="app-header">
-        <button class="icon-btn" onclick="alert('Menu — simulação')">☰</button>
+        <button class="icon-btn" onclick="showToast('Menu — simulação','ℹ️')">☰</button>
         <div class="header-user">
           <div class="avatar-circle">🧑‍🏫</div>
           <div><div class="name">Nome do Professor</div></div>
@@ -924,24 +732,18 @@ body{
         </div>
 
         <div class="section-label">Turmas ativas <span class="see-more">Ler mais</span></div>
-        <button class="turma-card c-red" onclick="openTurma('Turma 3', '30 alunos')">
-          <div class="tname">Turma 3</div><div class="tcount">30 alunos</div>
-        </button>
-        <button class="turma-card c-orange" onclick="openTurma('Turma 7', '34 alunos')">
-          <div class="tname">Turma 7</div><div class="tcount">34 alunos</div>
-        </button>
-        <button class="turma-card c-green" onclick="openTurma('Turma 1', '28 alunos')">
-          <div class="tname">Turma 1</div><div class="tcount">28 alunos</div>
-        </button>
+        <button class="turma-card c-red" onclick="openTurma('Turma 3', '30 alunos')"><div class="tname">Turma 3</div><div class="tcount">30 alunos</div></button>
+        <button class="turma-card c-orange" onclick="openTurma('Turma 7', '34 alunos')"><div class="tname">Turma 7</div><div class="tcount">34 alunos</div></button>
+        <button class="turma-card c-green" onclick="openTurma('Turma 1', '28 alunos')"><div class="tname">Turma 1</div><div class="tcount">28 alunos</div></button>
       </div>
       <div class="tabbar">
         <button class="active" onclick="navigateTo('screen-professor-home')"><span class="ticon">🏠</span>Início</button>
-        <button onclick="alert('Relatórios — simulação')"><span class="ticon">📈</span>Relatórios</button>
-        <button onclick="alert('Central de ajuda — simulação')"><span class="ticon">💬</span>Ajuda</button>
+        <button onclick="showToast('Relatórios — simulação','📈')"><span class="ticon">📈</span>Relatórios</button>
+        <button onclick="showToast('Central de ajuda — simulação','💬')"><span class="ticon">💬</span>Ajuda</button>
       </div>
     </div>
 
-    <!-- ================= PROFESSOR · TURMA ================= -->
+    <!-- ================= PROFESSOR · TURMA (Painel com alertas em tempo real) ================= -->
     <div class="app-screen" id="screen-professor-turma">
       <div class="app-header sub-header">
         <button class="icon-btn" onclick="goBack()">←</button>
@@ -949,10 +751,27 @@ body{
         <button class="icon-btn">🔍</button>
       </div>
       <div class="app-scroll">
-        <div class="card" style="text-align:center;">
+        <div class="focus-toggle-card">
+          <div class="ftxt">
+            <div class="ftitle">Modo Sala de Foco desta turma</div>
+            <div class="fdesc" id="focusDescTextTurma">Inativo — reflete no app do aluno</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="focusToggleTurma" onchange="toggleFocusMode(this.checked)">
+            <span class="switch-track"></span>
+          </label>
+        </div>
+
+        <div class="card" style="text-align:center; margin-top:14px;">
           <div style="font-size:12px; color:var(--ink-soft); font-weight:700; margin-bottom:8px;">Horários permitidos</div>
           <div style="font-size:20px; font-weight:800;">12h – 14h</div>
           <div style="font-size:20px; font-weight:800;">16h – 17h</div>
+        </div>
+
+        <div class="section-label">Alertas em tempo real <span class="see-more" id="teacherAlertCount">0 ativos</span></div>
+        <button class="alert-panel-btn" onclick="simulateTeacherAlert()">🔔 Simular alerta de aluno</button>
+        <div id="teacherAlertsList" style="margin-top:10px;">
+          <div class="empty-alerts">Nenhum alerta ativo no momento.</div>
         </div>
 
         <div class="section-label">Atividades corrigidas <span class="see-more">Ler mais</span></div>
@@ -963,9 +782,7 @@ body{
         </div>
 
         <div class="section-label">Apps permitidos <span class="see-more">Ler mais</span></div>
-        <div class="app-row">
-          <div class="app-chip">🌐</div><div class="app-chip">▶️</div><div class="app-chip">🌍</div><div class="app-chip">📗</div>
-        </div>
+        <div class="app-row"><div class="app-chip">🌐</div><div class="app-chip">▶️</div><div class="app-chip">🌍</div><div class="app-chip">📗</div></div>
 
         <div class="section-label">Alunos <span id="turmaCount" class="see-more">30 alunos</span></div>
         <div class="card">
@@ -984,25 +801,15 @@ body{
         <button class="icon-btn">🔍</button>
       </div>
       <div class="app-scroll">
-        <div class="status-card">
-          <div class="sicon">▶️</div>
-          <div><div class="slabel">Usando agora</div><div class="sapp">YouTube</div></div>
-        </div>
-
+        <div class="status-card"><div class="sicon">▶️</div><div><div class="slabel">Usando agora</div><div class="sapp">YouTube</div></div></div>
         <div class="section-label">Pontos fortes</div>
         <div class="perf-row good"><span>Matemática</span><span class="val">Média 9.6</span></div>
         <div class="perf-row good"><span>Inglês</span><span class="val">Média 9.4</span></div>
-
         <div class="section-label">Pontos fracos</div>
         <div class="perf-row bad"><span>Geografia</span><span class="val">Média 6.1</span></div>
         <div class="perf-row bad"><span>Física</span><span class="val">Média 5.5</span></div>
-
         <div class="section-label">Interesses</div>
-        <div class="tag-row">
-          <span class="tag">Computação</span>
-          <span class="tag">Desenhar</span>
-        </div>
-
+        <div class="tag-row"><span class="tag">Computação</span><span class="tag">Desenhar</span></div>
         <div class="section-label">Pontos</div>
         <div class="card" style="text-align:center; font-size:16px; font-weight:800;">Pontos: 13</div>
       </div>
@@ -1022,13 +829,22 @@ body{
 
 <script>
 /* ==========================================================================
-   INTEGRA CAMPUS — lógica de navegação da simulação
+   INTEGRA CAMPUS — lógica de navegação e funcionalidades interativas
    ========================================================================== */
 
-// Pilha de navegação para o botão "voltar" de cada tela.
+/* ---------------------------------------------------------------------
+   ESTADO GLOBAL DO APP (compartilhado entre os perfis, como no app real)
+   --------------------------------------------------------------------- */
 let screenStack = [];
 let currentScreen = 'screen-login';
 let loginRole = 'aluno';
+
+let focusModeActive = false;          // Modo Sala de Foco ligado/desligado
+let studentPoints = 13;               // Pontos (Banco de Horas / XP)
+let teacherAlerts = [];               // Alertas ativos no painel do professor
+let parentAlertsLog = [];             // Histórico de alertas visto pelos pais
+let alertIdCounter = 1;
+const completedTasks = { historia:false, artes:false, musica:false };
 
 const HOME_BY_ROLE = {
   aluno: 'screen-aluno-home',
@@ -1036,76 +852,276 @@ const HOME_BY_ROLE = {
   responsavel: 'screen-pais-home'
 };
 
+// Apps simulados na "tela inicial do smartphone" do aluno (Controle > Modo Sala de Foco)
+const PHONE_APPS = [
+  { key:'classroom', name:'Google Classroom', icon:'📘', blocked:false },
+  { key:'calculadora', name:'Calculadora', icon:'🧮', blocked:false },
+  { key:'biblioteca', name:'Biblioteca', icon:'📖', blocked:false },
+  { key:'instagram', name:'Instagram', icon:'📸', blocked:true },
+  { key:'tiktok', name:'TikTok', icon:'🎵', blocked:true },
+  { key:'whatsapp', name:'WhatsApp', icon:'💬', blocked:true },
+  { key:'youtube', name:'YouTube', icon:'▶️', blocked:true },
+  { key:'jogo', name:'Jogo', icon:'🎮', blocked:true },
+];
+
+/* ---------------------------------------------------------------------
+   NAVEGAÇÃO ENTRE TELAS
+   --------------------------------------------------------------------- */
 function showScreen(id){
   document.querySelectorAll('.app-screen').forEach(el => el.classList.remove('show'));
   document.getElementById(id).classList.add('show');
   currentScreen = id;
 }
-
-// Navega para uma nova tela, empilhando a tela atual para permitir "voltar".
 function navigateTo(id){
   if (id !== currentScreen) screenStack.push(currentScreen);
   showScreen(id);
 }
-
 function goBack(){
   const previous = screenStack.pop() || HOME_BY_ROLE[loginRole] || 'screen-aluno-home';
   showScreen(previous);
 }
 
-// ---------- Login ----------
+/* ---------------------------------------------------------------------
+   LOGIN / TROCA DE PERFIL (faixa de demonstração)
+   --------------------------------------------------------------------- */
 function pickLoginRole(role){
   loginRole = role;
   document.querySelectorAll('#loginRoleSelect button').forEach(b=>{
     b.classList.toggle('active', b.dataset.role === role);
   });
 }
-
 function doLogin(){
   screenStack = [];
   showScreen(HOME_BY_ROLE[loginRole]);
-  const strip = document.getElementById('demoStrip');
-  strip.style.display = 'flex';
+  document.getElementById('demoStrip').style.display = 'flex';
   highlightRoleButton(loginRole);
 }
-
 function logout(){
   screenStack = [];
   showScreen('screen-login');
   document.getElementById('demoStrip').style.display = 'none';
 }
-
 function switchRole(role){
   loginRole = role;
   screenStack = [];
   showScreen(HOME_BY_ROLE[role]);
   highlightRoleButton(role);
 }
-
 function highlightRoleButton(role){
   ['aluno','professor','responsavel'].forEach(r=>{
     document.getElementById('btn-role-'+r).classList.toggle('active', r === role);
   });
 }
 
-// ---------- Aluno · Conteúdo Extra ----------
+/* ---------------------------------------------------------------------
+   TOASTS (notificações rápidas, ex.: "Abrindo Instagram...")
+   --------------------------------------------------------------------- */
+function showToast(message, emoji, achievement){
+  const stack = document.getElementById('toastStack');
+  const el = document.createElement('div');
+  el.className = 'toast' + (achievement ? ' achievement' : '');
+  el.innerHTML = '<span class="temoji">' + (emoji || '🔔') + '</span><span>' + message + '</span>';
+  stack.appendChild(el);
+  requestAnimationFrame(() => el.classList.add('show'));
+  setTimeout(() => {
+    el.classList.remove('show');
+    setTimeout(() => el.remove(), 300);
+  }, 2600);
+}
+
+/* ---------------------------------------------------------------------
+   FUNCIONALIDADE 1 — Modo Sala de Foco e bloqueio de aplicativos
+   --------------------------------------------------------------------- */
+function renderAppGrid(){
+  const grid = document.getElementById('appIconGrid');
+  grid.innerHTML = PHONE_APPS.map(app => {
+    const showLock = focusModeActive && app.blocked;
+    return `
+      <button class="app-icon" onclick="handleAppClick('${app.key}')">
+        <span class="aiw" style="background:${appColor(app.key)}">
+          ${app.icon}
+          ${showLock ? '<span class="lock-badge">🔒</span>' : ''}
+        </span>
+        <span class="lbl">${app.name}</span>
+      </button>`;
+  }).join('');
+}
+
+function appColor(key){
+  const map = {
+    classroom:'#4C8DFF', calculadora:'#5B6470', biblioteca:'#6FA3D6',
+    instagram:'#D6249F', tiktok:'#111111', whatsapp:'#25D366',
+    youtube:'#FF0000', jogo:'#9013FE'
+  };
+  return map[key] || '#8AB6E1';
+}
+
+function toggleFocusMode(active){
+  focusModeActive = active;
+
+  // Sincroniza os dois interruptores (tela do aluno e tela da turma do professor)
+  document.getElementById('focusToggle').checked = active;
+  document.getElementById('focusToggleTurma').checked = active;
+
+  const desc = active
+    ? 'Ativo — apenas apps pedagógicos liberados'
+    : 'Inativo — todos os apps abrem normalmente';
+  document.getElementById('focusDescText').textContent = desc;
+  document.getElementById('focusDescTextTurma').textContent = active
+    ? 'Ativo — reflete no app do aluno'
+    : 'Inativo — reflete no app do aluno';
+
+  const pill = document.getElementById('alunoModePill');
+  pill.classList.toggle('active', active);
+  pill.innerHTML = '<span class="dot"></span>Modo Sala de Foco: ' + (active ? 'ativo' : 'inativo');
+
+  renderAppGrid();
+  showToast(active ? 'Modo Sala de Foco ativado' : 'Modo Sala de Foco desativado', active ? '🛡️' : '✅');
+}
+
+function handleAppClick(key){
+  const app = PHONE_APPS.find(a => a.key === key);
+  if (!app) return;
+
+  if (focusModeActive && app.blocked){
+    openBlockedModal(app.name);
+    logBlockAttempt(app.name);
+    // O sistema avisa o professor automaticamente — regulação contextual em ação.
+    addAlert('João Pedro', app.name);
+  } else {
+    showToast('Abrindo ' + app.name + '...', app.icon);
+  }
+}
+
+function openBlockedModal(appName){
+  document.getElementById('blockedModal').classList.add('show');
+}
+function closeBlockedModal(){
+  document.getElementById('blockedModal').classList.remove('show');
+}
+
+function logBlockAttempt(appName){
+  const card = document.getElementById('blockHistoryCard');
+  const time = nowTime();
+  const row = document.createElement('div');
+  row.className = 'list-item';
+  row.innerHTML = '<span class="li-left">🔒 ' + appName + ' bloqueado</span><span>' + time + '</span>';
+  if (card.querySelector('.empty-alerts')) card.innerHTML = '';
+  card.prepend(row);
+}
+
+/* ---------------------------------------------------------------------
+   FUNCIONALIDADE 2 — Painel de alertas do professor (tempo real)
+   --------------------------------------------------------------------- */
+function nowTime(){
+  const d = new Date();
+  return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+
+function addAlert(studentName, appName){
+  const alert = {
+    id: alertIdCounter++,
+    text: 'Aluno ' + studentName + ' tentou acessar ' + appName,
+    time: nowTime()
+  };
+  teacherAlerts.unshift(alert);
+  parentAlertsLog.unshift(alert);
+  renderTeacherAlerts();
+  renderParentAlerts();
+}
+
+function simulateTeacherAlert(){
+  const scenarios = [
+    ['João Pedro','Instagram'],
+    ['Maria Eduarda','TikTok'],
+    ['Lucas Andrade','WhatsApp'],
+    ['Beatriz Souza','YouTube']
+  ];
+  const pick = scenarios[Math.floor(Math.random() * scenarios.length)];
+  addAlert(pick[0], pick[1]);
+  showToast('Novo alerta recebido do sistema', '🔔');
+}
+
+function resolveAlert(id){
+  teacherAlerts = teacherAlerts.filter(a => a.id !== id);
+  renderTeacherAlerts();
+}
+
+function renderTeacherAlerts(){
+  const list = document.getElementById('teacherAlertsList');
+  const count = document.getElementById('teacherAlertCount');
+  count.textContent = teacherAlerts.length + ' ativos';
+  if (teacherAlerts.length === 0){
+    list.innerHTML = '<div class="empty-alerts">Nenhum alerta ativo no momento.</div>';
+    return;
+  }
+  list.innerHTML = teacherAlerts.map(a => `
+    <div class="alert-item">
+      <div class="atxt">${a.text}<span class="atime">às ${a.time}</span></div>
+      <button onclick="resolveAlert(${a.id})">Resolver</button>
+    </div>
+  `).join('');
+}
+
+/* ---------------------------------------------------------------------
+   FUNCIONALIDADE 4 — Alertas recentes para os pais (mesmo fluxo de dados)
+   --------------------------------------------------------------------- */
+function renderParentAlerts(){
+  const list = document.getElementById('parentAlertsList');
+  const count = document.getElementById('parentAlertCount');
+  count.textContent = parentAlertsLog.length + ' novos';
+  if (parentAlertsLog.length === 0){
+    list.innerHTML = '<div class="empty-alerts">Nenhum alerta no momento. Tudo tranquilo! ✅</div>';
+    return;
+  }
+  list.innerHTML = parentAlertsLog.slice(0,6).map(a => `
+    <div class="parent-alert">
+      <span class="pa-icon">⚠️</span>
+      <span>${a.text}<span class="pa-time">às ${a.time}</span></span>
+    </div>
+  `).join('');
+}
+
+/* ---------------------------------------------------------------------
+   FUNCIONALIDADE 3 — Gamificação (Banco de Horas / XP)
+   --------------------------------------------------------------------- */
+function completeTask(taskKey, subjectName, points){
+  if (completedTasks[taskKey]) return;
+  completedTasks[taskKey] = true;
+  studentPoints += points;
+
+  document.getElementById('alunoPointsValue').textContent = studentPoints;
+  document.getElementById('avatarPointsValue').textContent = studentPoints;
+
+  const pill = document.getElementById('alunoPointsPill');
+  pill.classList.add('bump');
+  setTimeout(() => pill.classList.remove('bump'), 250);
+
+  const btn = document.getElementById('task-btn-' + taskKey);
+  btn.textContent = 'Concluída ✓';
+  btn.disabled = true;
+
+  showToast('Você ganhou ' + points + ' XP por concluir a tarefa de ' + subjectName + '!', '🏆', true);
+}
+
+/* ---------------------------------------------------------------------
+   ALUNO · Conteúdo Extra
+   --------------------------------------------------------------------- */
 const SUBJECTS = {
-  historia:   { name:'História',    color:'c-red',    icon:'🏛️', teacher:'Professor' },
-  matematica: { name:'Matemática',  color:'c-orange', icon:'📐', teacher:'Professor' },
-  ingles:     { name:'Inglês',      color:'c-purple', icon:'🗣️', teacher:'Professor' },
-  artes:      { name:'Artes',       color:'c-green',  icon:'🎨', teacher:'Professor' },
-  computacao: { name:'Computação',  color:'c-purple', icon:'💻', teacher:'Professor' }
+  historia:   { name:'História',   color:'c-red',    icon:'🏛️' },
+  matematica: { name:'Matemática', color:'c-orange', icon:'📐' },
+  ingles:     { name:'Inglês',     color:'c-purple', icon:'🗣️' },
+  artes:      { name:'Artes',      color:'c-green',  icon:'🎨' },
+  computacao: { name:'Computação', color:'c-purple', icon:'💻' }
 };
 
 function openSubject(key){
   const s = SUBJECTS[key];
   const others = Object.keys(SUBJECTS).filter(k => k !== key);
-
   document.getElementById('contentScroll').innerHTML = `
     <div class="big-subject-card ${s.color}">
       <h3>${s.icon} ${s.name}</h3>
       <div class="bsub">Continue estudando</div>
-
       <div class="reco-block">
         <div class="rk">Livros recomendados</div>
         <div class="reco-cards">
@@ -1113,7 +1129,6 @@ function openSubject(key){
           <div class="reco-card"><div class="rtitle">Título</div><div class="rdesc">Nome do autor — descrição breve do conteúdo.</div></div>
         </div>
       </div>
-
       <div class="reco-block">
         <div class="rk">Vídeos recomendados</div>
         <div class="reco-cards">
@@ -1122,7 +1137,6 @@ function openSubject(key){
         </div>
       </div>
     </div>
-
     <div class="section-label">Continuar explorando</div>
     <div class="other-subjects">
       ${others.map(k => `<button class="${SUBJECTS[k].color}" onclick="openSubject('${k}')">${SUBJECTS[k].icon} ${SUBJECTS[k].name}</button>`).join('')}
@@ -1131,18 +1145,25 @@ function openSubject(key){
   navigateTo('screen-content');
 }
 
-// ---------- Professor · Turma ----------
+/* ---------------------------------------------------------------------
+   PROFESSOR · Turma / Detalhe do aluno
+   --------------------------------------------------------------------- */
 function openTurma(name, count){
   document.getElementById('turmaTitle').textContent = name;
   document.getElementById('turmaCount').textContent = count;
   navigateTo('screen-professor-turma');
 }
-
-// ---------- Professor · Detalhe do aluno ----------
 function openAlunoDetail(name){
   document.getElementById('alunoDetailTitle').textContent = name;
   navigateTo('screen-aluno-detail');
 }
+
+/* ---------------------------------------------------------------------
+   INICIALIZAÇÃO
+   --------------------------------------------------------------------- */
+renderAppGrid();
+renderTeacherAlerts();
+renderParentAlerts();
 </script>
 
 </body>
